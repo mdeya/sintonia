@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <p>Click the button to copy our e-transfer email:</p>
+    <input type="text" value="urbankiz.hfx@gmail.com" id="email" readonly style="border:none; color:transparent; background:transparent;">
+    <button onclick="copyEmail()">Copy Email</button>
+
+    <script>
+        function copyEmail() {
+            var emailInput = document.getElementById('email');
+            emailInput.type = 'text';
+            emailInput.select();
+            document.execCommand('copy');
+            emailInput.type = 'hidden';
+            alert('Email copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
