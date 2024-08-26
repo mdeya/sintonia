@@ -18,12 +18,19 @@
         p {
             font-size: 18px;
         }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <p>Click the button to copy our e-transfer email:</p>
     <input type="text" value="urbankiz.hfx@gmail.com" id="email" readonly style="border:none; color:transparent; background:transparent;">
     <button onclick="copyEmail()">Copy Email</button>
+    
+    <!-- Add the poster image below the button -->
+    <img src="Sint_Bass.png" alt="Event Poster">
 
     <script>
         function copyEmail() {
